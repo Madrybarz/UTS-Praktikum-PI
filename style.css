@@ -1,0 +1,56 @@
+/* Tugas 4 - Pengenalan CSS | Tema: palet Color Hunt 071B2B, 167D8D, B9E4E8, EEEEEE */
+:root{--navy:#071b2b;--blue:#167d8d;--gold:#b9e4e8;--ink:#1c2530;--line:#d4d4d4}
+*{box-sizing:border-box}
+body{font:100% "Lucida Sans",Verdana,sans-serif;margin:0;padding:20px;line-height:26px;color:var(--ink);
+  background:#e9eef4 url('fotogedungunper.jpg') no-repeat center/cover fixed;
+  background-image:url('fotogedungunper.jpg'),linear-gradient(135deg,#071b2b,#167d8d 70%,#b9e4e8);}
+.container{max-width:1100px;margin:0 auto}
+.wrapper{position:relative;overflow:auto}
+#top,#sidebar,#bottom,.menuitem{border-radius:6px;margin:4px}
+#top{display:flex;align-items:center;gap:16px;background:var(--navy);color:#fff;padding:15px 20px;border-bottom:5px solid var(--gold)}
+#top h1,#top p,#menulist{margin:0;padding:0}
+#top h1{font-size:1.6rem;letter-spacing:1px}
+.logo{width:64px;height:64px}
+#menubar{width:200px;float:left}
+.menuitem{list-style:none;background:#eeeeee;border:1px solid var(--line);padding:2px;cursor:pointer;transition:background .2s}
+.menuitem>a{display:block;padding:4px 10px;text-decoration:none}
+.menuitem:hover{background:#fff}
+.menuitem.active{background:var(--gold);font-weight:bold}
+#main{padding:14px 20px;margin:4px 214px;background:rgba(8,8,8,.6);color:#fff;border-radius:6px;min-height:420px}
+#main h1{margin-top:4px;border-bottom:3px solid var(--gold);padding-bottom:4px}
+#main h2{color:var(--gold);margin-bottom:4px}
+#main a{color:var(--gold)}
+#sidebar{background:var(--blue);color:#fff;padding:10px;width:180px;position:absolute;top:0;right:0;bottom:0}
+#sidebar a{color:#fff}
+#bottom{background:transparent;color:#fff;text-align:center;padding:10px;font-size:90%;line-height:14px}
+a{color:#000;text-decoration:underline}
+a:hover{text-decoration:none}
+/* kartu */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:10px}
+.card{background:rgba(255,255,255,.1);border-left:4px solid var(--gold);border-radius:6px;padding:8px 14px;line-height:22px}
+.card h3{margin:4px 0;color:var(--gold)}
+.card p{margin:4px 0 8px}
+blockquote{margin:8px 0;padding:8px 16px;border-left:4px solid var(--gold);background:rgba(255,255,255,.1);font-style:italic}
+/* struktur organisasi */
+.tree{text-align:center}
+.tree .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:14px 0}
+.node{display:inline-block;background:var(--blue);border:2px solid var(--gold);border-radius:6px;padding:6px 14px;line-height:20px}
+.node.top{display:block;width:260px;margin:14px auto}
+.node.soft{background:rgba(255,255,255,.12);border-color:#fff}
+/* tabel */
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid rgba(255,255,255,.4);padding:6px 10px;text-align:left}
+th{background:var(--blue)}
+/* form */
+.form{display:grid;gap:4px;max-width:480px}
+.form input,.form select,.form textarea{padding:8px;border:1px solid var(--line);border-radius:4px;font:inherit}
+.form button{margin-top:8px;padding:10px;color:#071b2b;background:var(--gold);border:0;border-radius:4px;font-weight:bold;cursor:pointer}
+.form button:hover{background:#eeeeee}
+.form :focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+/* responsif */
+@media(max-width:800px){
+  body{padding:8px}
+  #menubar{float:none;width:auto}
+  #main{margin:4px}
+  #sidebar{position:static;width:auto}
+}
